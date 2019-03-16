@@ -1,0 +1,84 @@
+body{
+    overflow-x: hidden;
+        background-image: url(voye.jpg);
+        background-size: contain;
+}
+#fname1{
+    position: relative;
+    left: 71px;
+}
+#mname{
+position: relative;
+left: 53px;    
+}
+#lname{
+position: relative;
+left: 73px;        
+}
+#gen{
+position: relative;
+left: 95px;        
+}
+#dob{
+position: relative;
+left: 62px;            
+}
+#age{
+position: relative;
+left: 115px;        
+}
+#phn{
+position: relative;
+left: 45px;        
+}
+#ano{
+position: relative;
+left: 73px;
+}
+#cty{
+position: relative;
+left: 114px;            
+}
+#const{
+position: relative;
+left: 62px;        
+}
+#fname{
+position: relative;
+left: 60px;        
+}
+#pin{
+position: relative;
+left: 90px;        
+}
+#mname{
+position: relative;
+left: 55px;        
+}
+#occ{
+position: relative;
+left: 73px;        
+}
+.btn{
+    font-family: sans-serif;
+    border: green solid 1px;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color:darksalmon;
+    font-size:12.2px;
+    width:100px;
+    cursor:pointer;
+}
+#sub{
+    position: relative;
+    left: 120px;
+    top:10px;
+}
+#p1{
+            font-size: 24.2px;
+            position: relative;
+            left: 50px;
+            color:forestgreen;
+            font-family:sans-serif;
+}

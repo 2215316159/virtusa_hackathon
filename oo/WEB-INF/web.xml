@@ -1,0 +1,29 @@
+<web-app>
+	<servlet>
+		<servlet-name>Check</servlet-name>
+		<jsp-file>/check.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Insertion</servlet-name>
+		<jsp-file>/insertion.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Vdisplay</servlet-name>
+		<jsp-file>/vdisplay.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Vcc</servlet-name>
+		<jsp-file>/vcc.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Booth</servlet-name>
+		<jsp-file>/booth.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>Ccity</servlet-name>
+		<jsp-file>/ccity.jsp</jsp-file>
+	</servlet>
+	<welcome-file-list>
+		<welcome-file>home.html</welcome-file>
+	</welcome-file-list>
+</web-app>

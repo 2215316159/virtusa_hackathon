@@ -1,0 +1,78 @@
+<html>
+    <style type="text/css">
+        body{
+            overflow-x: hidden;
+            background-image: url(voye.jpg);
+            background-size: contain;
+        }
+        .btn{            
+                font-family: sans-serif;
+                border: green solid 1px;
+                border-radius: 5px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                background-color:darksalmon;
+                font-size:12.2px;
+                width:100px;
+                cursor:pointer;
+                position: relative;
+                left:60px;
+                top:10px;
+        }
+        input{
+            position: relative;
+            left: 75px;
+        }
+        #cty{
+            position: relative;
+            left: 62px;
+        }
+        #const{
+            position: relative;
+            left:10px;
+        }
+        #p1{
+            font-size: 24.2px;
+            position: relative;
+            left: 50px;
+            color:forestgreen;
+            font-family:sans-serif; 
+        }
+    </style>
+<body>
+    <p id="p1">UPDATE YOUR DETAILS HERE</p>
+    <form action="ccity.jsp">
+    <p>Voter Id: <input type="number" required maxlength="5" title="voter id is numeric" name="vtr"></p>
+    <p>New City : <select name="cty" id="cty" required name="cty"></select></p>
+    <p>New Constiuency : <select name="const" id="const" required name="const"></select></p>
+    <p><input type="submit" class="btn" id="sub"></p>
+    </form>
+    <script>
+        window.onload = function() {    
+    var city = {
+        'Hyderabad': ['Uppal', 'ECIL','LB nagar','Gachibowli'],
+        'Chennai': ['T nagar', 'Egmore','Villivakam'],
+        'Bangalore':['Sarjapur','Electronic city','Hsr layout'],
+        'Mumbai':['bandra','navy mumbai','malad east'],
+      };
+      cty = document.getElementById('cty');
+      const1 = document.getElementById('const');
+    setOptions(cty, Object.keys(city));
+  setOptions(const1, city[cty.value]);
+  cty.addEventListener('change', function() {
+    
+    setOptions(const1, city[cty.value]);
+  });
+    
+  function setOptions(dropDown, options) {
+    
+    dropDown.innerHTML = '';
+    
+    options.forEach(function(value) {
+      dropDown.innerHTML += '<option name="' + value + '">' + value + '</option>';
+    });
+  }  
+};    
+        </script>
+</body>
+</html>

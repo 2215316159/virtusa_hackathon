@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link href="css_registration.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <form action="insertion.jsp">
+            <p id="p1">REGISTRATION FORM</p>
+            <p>First Name : <input type="text" name="fir_name" id="fname1" required pattern="[a-zA-Z]{1,}" title="only alphabets"></p>
+            <p>Middle Name : <input type="text" name="mid_name" id="mname" pattern="[a-zA-Z]{1,}" title="only alphabets"></p>
+            <p>Last Name : <input type="text" name="l_name" id="lname" required pattern="[a-zA-Z]{1,}" title="only alphabets"></p>
+            <p>Gender : <select name="gen" required id="gen"><option value="M">Male</option>
+                                <option value="F">Female</option>                                       
+                                <option value="O">Other</option>
+                        </select></p>
+            <p>Date of Birth :<input type="date" name="dob" required id="dob"> </p>
+            <p>Age : <input type="text" name="age" id="age" required onblur="age1()"></p>
+            <p>Phone Number : <input type="text" name="phn" id="phn" required pattern="[0-9]{10}" title="number should be 10 digits"></p>
+            <p>Aadhar ID : <input type="text" name="ano" id="ano" required pattern="[0-9]{12}" title="id should be 12 digits"></p>
+            <p>City : <select name="cty" id="cty" required></select></p>
+            <p>Constiuency : <select name="const" id="const" required></select></p>
+            <p>Pincode : <input type="text" name="pin" id="pin" required pattern="[0-9]{6}" title="pincode should be 6 digits"></p>
+            <p>Father Name : <input type="text" name="f_name" id="fname" required pattern="[a-zA-Z]{1,}"></p>
+            <p>Mother Name : <input type="text" name="m_name" id="mname" required pattern="[a-zA-Z]{1,}"></p>
+            <p>occupation : <input type="text" name="occ" id="occ" required pattern="[a-zA-Z]{1,}"></p>
+            <p><input type="submit" class="btn" id="sub"></p>
+        </form>
+        <script>
+        function age1()
+        {
+            var a;
+            a=parseInt(document.getElementById('age').value);
+            if(a<18)
+                {
+                    alert('age must be greater than 18');
+                }
+        }
+            window.onload = function() {
+  var city = {
+        'Hyderabad': ['Uppal', 'ECIL','LB nagar','Gachibowli'],
+        'Chennai': ['T nagar', 'Egmore','Villivakam'],
+        'Bangalore':['Sarjapur','Electronic city','Hsr layout'],
+        'Mumbai':['bandra','navy mumbai','malad east'],
+      };
+      cty = document.getElementById('cty');
+      const1 = document.getElementById('const');
+    setOptions(cty, Object.keys(city));
+  setOptions(const1, city[cty.value]);
+  cty.addEventListener('change', function() {
+    
+    setOptions(const1, city[cty.value]);
+  });
+    
+  function setOptions(dropDown, options) {
+    
+    dropDown.innerHTML = '';
+    
+    options.forEach(function(value) {
+      dropDown.innerHTML += '<option name="' + value + '">' + value + '</option>';
+    });
+  }  
+};
+        </script>
+    </body>
+</html>

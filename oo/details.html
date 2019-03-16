@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style type="text/css">
+        body{
+            
+        background-image: url(voye.jpg);
+        background-size: contain;
+            overflow-x: hidden;
+        }
+    #p1{
+            font-size: 24.2px;
+            position: relative;
+            left: 50px;
+            color:forestgreen;
+            font-family:sans-serif; 
+        }
+        .btn{            
+                font-family: sans-serif;
+                border: green solid 1px;
+                border-radius: 5px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                background-color:darksalmon;
+                font-size:12.2px;
+                width:100px;
+                cursor:pointer;
+                position: relative;
+                left:60px;
+                top:10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="vdisplay.jsp">
+    <p id="p1">VOTER DETAILS</p>
+    <p>Voter Id : <input type="number" required maxlength="5" title="voter id is numeric" name="vote">
+    <p><input type="submit" class="btn" id="sub"></p>
+    </form>
+</body>
+</html>

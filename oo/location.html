@@ -1,0 +1,76 @@
+<html>
+<head>
+    <style type="text/css">
+        body{
+            
+        background-image: url(voye.jpg);
+        background-size: contain;
+            overflow-x: hidden;
+        }
+        #p1{
+            font-size: 24.2px;
+            position: relative;
+            left: 50px;
+            color:forestgreen;
+            font-family:sans-serif;
+        }
+        #sub{
+                font-family: sans-serif;
+                border: green solid 1px;
+                border-radius: 5px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                background-color:darksalmon;
+                font-size:12.2px;
+                width:100px;
+                cursor:pointer;
+                position: relative;
+                left:60px;
+                top:10px;
+        }
+        #cty{
+            position: relative;
+            left:70px;
+        }
+        #const{
+            position: relative;
+            left:18px;
+        }
+    </style>
+</head>
+    <body>
+    <form action="vcc.jsp">
+    <p id="p1">LOCATION POLLING BOOTHS</p>
+    <p>City : <select name="cty" id="cty" required></select></p>
+    <p>Constiuency : <select name="const" id="const" required></select></p>
+    <p><input type="submit" class="btn" id="sub"></p>
+    </form>
+    </body>
+    <script>
+        window.onload = function() {
+                  var city = {
+                        'Hyderabad': ['Uppal', 'ECIL','LB nagar','Gachibowli'],
+                        'Chennai': ['T nagar', 'Egmore','Villivakam'],
+                        'Bangalore':['Sarjapur','Electronic city','Hsr layout'],
+                        'Mumbai':['bandra','navy mumbai','malad east'],
+                      };
+                      cty = document.getElementById('cty');
+                      const1 = document.getElementById('const');
+                    setOptions(cty, Object.keys(city));
+                  setOptions(const1, city[cty.value]);
+                  cty.addEventListener('change', function() {
+
+                    setOptions(const1, city[cty.value]);
+                  });
+
+                  function setOptions(dropDown, options) {
+
+                    dropDown.innerHTML = '';
+
+                    options.forEach(function(value) {
+                      dropDown.innerHTML += '<option name="' + value + '">' + value + '</option>';
+                    });
+                  }  
+            };
+    </script>
+</html>

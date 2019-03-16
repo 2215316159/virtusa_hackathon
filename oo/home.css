@@ -1,0 +1,56 @@
+body{
+    margin:0 auto;
+    overflow-x: hidden;
+    background-image: url(voting.jpg);
+    background-size:5000px 1000px;
+    background-repeat: no-repeat;
+}
+ #logo {
+                margin-top:8px;
+                width:100px;
+                float:left;
+                margin-right:8px;
+                position: relative;
+                left: 5px;
+            }
+#links_container {
+                background-color: #A91717;
+                width: 100%;
+                height: 40px;
+                position:absolute;
+                top:110px;
+            }
+            #links {
+                width:1000px;
+                margin:0 auto;
+                height:60px;
+            }
+            #links a {
+                color: white;
+                text-decoration: none;
+                padding: 0 10px;
+                border-right: 1px solid #BB4545;
+                font-size:18px;
+                position: relative;
+                top: 10px;   
+            }
+            #links a:hover {
+                text-decoration: underline;
+            }
+#iframes{
+    width: 600px;
+    height:600px;
+    position: absolute;
+    top:200px;
+    left:400px;
+    border:none;
+}
+.p1{
+   font-family: sans-serif;
+    font-weight: bold;
+    font-size:40px;
+    position: relative;
+    left: 20px;
+    top: 30px;
+    color:brown;
+}
