@@ -2,8 +2,6 @@
 <%@ page import ="javax.sql.*" %>
 <%@ page import ="java.io.*" %>
 <%
-// Class.forName("com.mysql.jdbc.Driver").newInstance();
-// java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/voter","hack","oohack");
 String vtr=request.getParameter("vtr");
 int n=Integer.parseInt(vtr);
 switch(n%10){
